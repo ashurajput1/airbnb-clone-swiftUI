@@ -11,11 +11,14 @@ import MapKit
 struct lisitngDetailView: View {
     
     @Environment(\.dismiss) var dismiss
-    
+    @State private var cameraPostion:MapCameraPosition
     var listing:ListingModel
     
     init(listing:ListingModel){
         self.listing = listing
+        var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: listing.latitude!, longitude: listing.longitude!), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+        self._cameraPostion = State(initialValue: .region(region))
+        
     }
     var body: some View {
         ScrollView
@@ -44,19 +47,19 @@ struct lisitngDetailView: View {
                     .padding(.vertical,30)
                 }
             VStack(alignment: .leading) {
-                Text("Miami Villa")
+                Text(listing.title ?? "")
                     .bold()
                     .font(.title)
                 VStack(alignment: .leading, spacing: 4) {
                     HStack() {
                         Image(systemName: "star.fill")
-                        Text("4.8")
+                        Text(String(listing.rating ?? 4))
                         Text("-")
-                        Text("28 reviews")
+                        Text(String(listing.reviews ?? 0) + " reviews")
                             .underline()
                             .bold()
                     }
-                    Text("Miami FLorida")
+                    Text("\(listing.city ?? ""),\(listing.state ?? "")")
                 }
             }
             .frame(maxWidth:.infinity,alignment: .leading)
@@ -69,7 +72,7 @@ struct lisitngDetailView: View {
             {
                 
                 VStack(alignment:.leading) {
-                    Text("Entire Villa is Hosted by John Smith")
+                    Text("Entire \(listing.types.names) is Hosted by \(listing.ownerName ?? "NA")")
                         .frame(alignment: .leading)
                         .font(.title3)
                         .bold()
@@ -150,12 +153,13 @@ struct lisitngDetailView: View {
             VStack(alignment:.leading,spacing: 18) {
                 Text("What this place offers")
                     .bold()
-                ForEach( 0 ... 3,id: \.self){ listing in
+                ForEach( listing.amenities,id: \.self){ listing in
                     HStack(spacing:20)
                     {
-                        Image(systemName: "wifi")
-                            .bold()
-                        Text("Wifi")
+                        Image(listing.amenetiesImage)
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                        Text(listing.amenetiesName)
                         
                     }
                     .padding(.leading)
@@ -171,7 +175,8 @@ struct lisitngDetailView: View {
             {
                 Text("Where you'll be")
                     .bold()
-                Map()
+                Map(position: $cameraPostion)
+                           .edgesIgnoringSafeArea(.all)
                 
             }
             .frame(height: 300)

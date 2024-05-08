@@ -8,29 +8,30 @@
 import SwiftUI
 
 struct listingView: View {
-    var imageUrls:[String]?
-    init(imageUrls:[String]) {
-        self.imageUrls = imageUrls
+    var listing:ListingModel
+    init(listing:ListingModel) {
+        self.listing = listing
     }
     var body: some View {
         VStack(spacing:8)
         {
-            listingImageCarosoulView(images: self.imageUrls!)
+            listingImageCarosoulView(images: listing.imageUrl ?? [])
             .frame(height: 400)
             .clipShape(RoundedRectangle(cornerRadius: 25))
             
             HStack(alignment:.top) {
                 VStack(alignment:.leading) {
                     HStack {
-                        Text("Miami,")
+                        Text((self.listing.city ?? "") + "," )
                             .bold()
-                        Text("Florida")
+                        Text((self.listing.state ?? ""))
                             .bold()
                     }
-                    Text("12 mi away")
+                    Text(self.listing.address ?? "")
                     
                     Text("Nov 3 - 10")
-                    Text("$567 Hotel")
+                    
+                    Text("$ " + String(listing.pricePerNight ?? 0))
                         .bold()
                 }
                 Spacer()
@@ -51,5 +52,5 @@ struct listingView: View {
 }
 
 #Preview {
-    listingView(imageUrls: DeveloperPreview.shared.listing[0].imageUrl!)
+    listingView(listing: DeveloperPreview.shared.listing[0])
 }

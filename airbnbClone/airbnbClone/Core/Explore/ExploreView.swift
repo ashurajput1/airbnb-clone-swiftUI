@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ExploreView: View {
     @State var showDestinationSearchView = false
+    @StateObject var viewModel = ExploreViewModel(service: ExploreService())
     var body: some View {
         
         NavigationStack
@@ -28,7 +29,7 @@ struct ExploreView: View {
                             }
                         ForEach(DeveloperPreview.shared.listing) { listing in
                             NavigationLink(value: listing) {
-                                listingView(imageUrls: listing.imageUrl!)
+                                listingView(listing: listing)
                             }
                          
                         }

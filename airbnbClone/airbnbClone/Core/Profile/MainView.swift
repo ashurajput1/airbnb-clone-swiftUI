@@ -13,7 +13,7 @@ struct MainView: View {
         {
             ExploreView()
                 .tabItem { Label("search", systemImage: "magnifyingglass") }
-            listingView(imageUrls: DeveloperPreview.shared.listing[0].imageUrl!)
+            listingView(listing: DeveloperPreview.shared.listing[0])
                 .tabItem { Label("heart", systemImage: "heart.fill") }
             ProfileView()
                 .tabItem  { Label("wishlist", systemImage: "checklist.checked.rtl") }

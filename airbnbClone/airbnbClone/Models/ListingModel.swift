@@ -28,6 +28,7 @@ struct ListingModel:Identifiable,Codable,Hashable
     let state: String?
     let title: String?
     let  rating: Double?
+    let reviews: Int?
     var features: [ListingFeatures]
     var amenities: [ListingAmeneties]
     var types: ListingType
@@ -135,7 +136,7 @@ enum ListingType:Identifiable,Codable
     case townhouse
     case villa
     
-    var images:String {
+    var names:String {
         switch self
         {
         case .apartment:
