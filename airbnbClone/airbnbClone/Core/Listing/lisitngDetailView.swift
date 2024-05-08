@@ -11,13 +11,13 @@ import MapKit
 struct lisitngDetailView: View {
     
     @Environment(\.dismiss) var dismiss
-    @State private var cameraPostion:MapCameraPosition
+    @State private var cameraPosition:MapCameraPosition
     var listing:ListingModel
     
     init(listing:ListingModel){
         self.listing = listing
-        var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: listing.latitude!, longitude: listing.longitude!), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
-        self._cameraPostion = State(initialValue: .region(region))
+        let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: listing.latitude!, longitude: listing.longitude!), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+        self._cameraPosition = State(initialValue: .region(region))
         
     }
     var body: some View {
@@ -175,7 +175,7 @@ struct lisitngDetailView: View {
             {
                 Text("Where you'll be")
                     .bold()
-                Map(position: $cameraPostion)
+                Map(position: $cameraPosition)
                            .edgesIgnoringSafeArea(.all)
                 
             }

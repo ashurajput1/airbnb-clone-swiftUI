@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct searchView: View {
+    var destination:String
+    init(destination: String) {
+        if destination == "" {
+            self.destination = "Where to"
+        } else {
+            self.destination = destination
+        }
+       
+    }
     var body: some View {
         HStack {
             Image(systemName: "magnifyingglass")
             VStack(alignment:.leading) {
-                Text("Miami")
+                Text(destination)
                     .bold()
                 Text("Any Week - Add Guest")
                     .font(.caption2)
@@ -41,5 +50,5 @@ struct searchView: View {
 }
 
 #Preview {
-    searchView()
+    searchView(destination: "New Destination")
 }

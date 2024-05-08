@@ -13,9 +13,10 @@ enum destinationSearchOptions
     case guest
 }
 struct destinationSearchView: View {
+    @ObservedObject var viewModel:ExploreViewModel
     @Binding var show:Bool
-    @State var destination = ""
-    @State var chooseDestination:destinationSearchOptions = .dates
+    @Binding var destination:String
+    @State var chooseDestination:destinationSearchOptions = .location
     @State var states = 0
     @State var steps = 0
     var body: some View {
@@ -26,6 +27,7 @@ struct destinationSearchView: View {
               
                 Button(action: {
                     print("lkmlmlk")
+                    viewModel.fetchListing()
                     show.toggle()
                 }, label: {
                     HStack
@@ -65,6 +67,11 @@ struct destinationSearchView: View {
                         {
                             Image(systemName: "magnifyingglass")
                             TextField("Search Destination", text: $destination)
+                                .onSubmit {
+                                    viewModel.filterByLocation(location: destination)
+                                    show.toggle()
+                                    
+                                }
                         }
                         .frame(height: 40)
                         .frame(maxWidth:.infinity)
@@ -105,12 +112,6 @@ struct destinationSearchView: View {
                 }
               
             }
-            
-            
-            
-            
-            
-            
             
             VStack
             {
@@ -197,7 +198,7 @@ struct destinationSearchView: View {
     
 }
 #Preview {
-    destinationSearchView(show: .constant(false),chooseDestination: .location)
+    destinationSearchView(viewModel: ExploreViewModel(service: ExploreService()), show: .constant(false), destination: .constant("asdfa"),chooseDestination: .location)
 }
 
 struct ExtractedView: View {

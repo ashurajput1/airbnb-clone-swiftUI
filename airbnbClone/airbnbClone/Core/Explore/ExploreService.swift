@@ -10,7 +10,7 @@ import Foundation
 
 class ExploreService
 {
-    func fetchListing() async throws -> [ListingModel]
+    func fetchListing() -> [ListingModel]
     {
         return DeveloperPreview.shared.listing
     }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ExploreView: View {
     @State var showDestinationSearchView = false
+    @State var destination = ""
     @StateObject var viewModel = ExploreViewModel(service: ExploreService())
     var body: some View {
         
@@ -16,18 +17,18 @@ struct ExploreView: View {
         {
             if showDestinationSearchView
             {
-                destinationSearchView(show: $showDestinationSearchView)
+                destinationSearchView(viewModel: viewModel, show: $showDestinationSearchView,destination: $destination)
             }
             else
             {
                 ScrollView{
                     LazyVStack()
                     {
-                        searchView()
+                        searchView(destination: destination)
                             .onTapGesture {
                                 showDestinationSearchView.toggle()
                             }
-                        ForEach(DeveloperPreview.shared.listing) { listing in
+                        ForEach(viewModel.listing) { listing in
                             NavigationLink(value: listing) {
                                 listingView(listing: listing)
                             }
