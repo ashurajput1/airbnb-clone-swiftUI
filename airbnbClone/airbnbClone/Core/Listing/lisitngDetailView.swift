@@ -37,14 +37,14 @@ struct lisitngDetailView: View {
                                 .padding()
                                 .background(.white)
                                 .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                                .frame(width:45,height:45)
+                                .frame(width:40,height:40)
                                 .tint(.black)
                                 
                                 
                         })
                     }
-                    .padding(.horizontal,30)
-                    .padding(.vertical,30)
+                    .padding(.top,50)
+                    .padding(.horizontal,20)
                 }
             VStack(alignment: .leading) {
                 Text(listing.title ?? "")
@@ -199,7 +199,7 @@ struct lisitngDetailView: View {
                 .bold()
                 Spacer()
                 Button(action: {
-                    print("ashutosh chauhan")
+                    print("add Reserve Btn functionality")
                 }, label: {
                     Text("Reserve")
                         .frame(width: 100, height: 20)

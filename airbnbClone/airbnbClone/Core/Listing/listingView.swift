@@ -37,7 +37,7 @@ struct listingView: View {
                 Spacer()
                 HStack {
                     Image(systemName: "star.fill")
-                    Text("4.86")
+                    Text(String(format: "%.1f", listing.rating ?? 0))
                 }
             }
 

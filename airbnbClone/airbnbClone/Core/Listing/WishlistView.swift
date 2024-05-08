@@ -22,7 +22,7 @@ struct WishlistView: View {
                 .padding(.all,15)
                 
                 Button(action: {
-                    print("ashutosh chauhan")
+                    print("Add Login Functionality Here")
                 }, label: {
                     Text("log in")
                         .frame(width: 370, height: 50)

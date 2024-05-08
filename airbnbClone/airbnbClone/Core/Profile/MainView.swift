@@ -12,11 +12,11 @@ struct MainView: View {
         TabView
         {
             ExploreView()
-                .tabItem { Label("search", systemImage: "magnifyingglass") }
-            listingView(listing: DeveloperPreview.shared.listing[0])
-                .tabItem { Label("heart", systemImage: "heart.fill") }
+                .tabItem { Label("Search", systemImage: "magnifyingglass") }
+            WishlistView()
+                .tabItem { Label("Wishlist", systemImage: "heart.fill") }
             ProfileView()
-                .tabItem  { Label("wishlist", systemImage: "checklist.checked.rtl") }
+                .tabItem  { Label("Profile", systemImage: "person.crop.circle") }
         }
     }
 }

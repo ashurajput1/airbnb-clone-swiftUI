@@ -31,7 +31,7 @@ struct searchView: View {
             Spacer()
             
             Button("", systemImage: "line.3.horizontal.decrease.circle") {
-                print("ashutosh chauhan")
+                print("button pressed")
             }
             .foregroundColor(.black)
             

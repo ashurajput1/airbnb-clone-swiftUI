@@ -25,5 +25,5 @@ struct listingImageCarosoulView: View {
 }
 
 #Preview {
-    listingImageCarosoulView(images: ["hotel1"])
+    listingImageCarosoulView(images: ["image1"])
 }

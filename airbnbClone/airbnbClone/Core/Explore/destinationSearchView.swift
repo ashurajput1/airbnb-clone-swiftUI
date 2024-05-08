@@ -26,7 +26,6 @@ struct destinationSearchView: View {
             {
               
                 Button(action: {
-                    print("lkmlmlk")
                     viewModel.fetchListing()
                     show.toggle()
                 }, label: {
@@ -155,11 +154,12 @@ struct destinationSearchView: View {
                             .padding()
                         HStack
                         {
-                            Stepper("\(steps)") {
+                            Stepper("\(steps) Adults") {
                                 steps  += 1
                             } onDecrement: {
                                 steps -= 1
                             }
+                            .bold()
                             .padding()
                         }
                     }
