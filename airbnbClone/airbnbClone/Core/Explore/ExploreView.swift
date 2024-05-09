@@ -2,7 +2,7 @@
 //  ExploreView.swift
 //  airbnbClone
 //
-//  Created by FuturesoftM2 on 24/04/24.
+//  Created by Ashutosh Chauhan on 24/04/24.
 //
 
 import SwiftUI
@@ -28,12 +28,24 @@ struct ExploreView: View {
                             .onTapGesture {
                                 showDestinationSearchView.toggle()
                             }
-                        ForEach(viewModel.listing) { listing in
-                            NavigationLink(value: listing) {
-                                listingView(listing: listing)
+                        if viewModel.listing.count == 0 {
+                            VStack(alignment:.center){
+                                Text("No Item Found")
+                                    .font(.title)
+                                    .foregroundStyle(.black)
+                                    .bold()
                             }
-                         
+                            .frame(height: 600)
+                           
+                        } else {
+                            ForEach(viewModel.listing) { listing in
+                                NavigationLink(value: listing) {
+                                    listingView(listing: listing)
+                                }
+                             
+                            }
                         }
+
                     }
                     
                 }

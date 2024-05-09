@@ -2,7 +2,7 @@
 //  ListingModel.swift
 //  airbnbClone
 //
-//  Created by FuturesoftM2 on 01/05/24.
+//  Created by Ashutosh Chauhan on 01/05/24.
 //
 
 import Foundation

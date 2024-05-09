@@ -142,8 +142,8 @@
             filePath = "airbnbClone/Core/Explore/ExploreView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -482,86 +482,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7748D70D-1A7F-41FA-85C5-0C47D12BF556"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "airbnbClone/Core/Explore/ExploreView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "398EB666-0DD7-4ED5-9336-4A38772D1748"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "airbnbClone/Core/Explore/ExploreView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0285A5E2-B017-4953-8B27-73616A9FFEB5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "airbnbClone/Core/Explore/ExploreView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "0285A5E2-B017-4953-8B27-73616A9FFEB5 - 73a052e55bf7b321"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (airbnbClone.ListingModel) -&gt; SwiftUI.NavigationLink&lt;airbnbClone.listingView, Swift.Never&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0, SwiftUI.ForEach&lt;Swift.Array&lt;airbnbClone.ListingModel&gt;, Swift.Optional&lt;Swift.String&gt;, SwiftUI.NavigationLink&lt;airbnbClone.listingView, Swift.Never&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.LazyVStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0, SwiftUI.ForEach&lt;Swift.Array&lt;airbnbClone.ListingModel&gt;, Swift.Optional&lt;Swift.String&gt;, SwiftUI.NavigationLink&lt;airbnbClone.listingView, Swift.Never&gt;&gt;)&gt;&gt; in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;airbnbClone.destinationSearchView, &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0&gt; in airbnbClone.ExploreView.body.getter : some"
-                  moduleName = "airbnbClone"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/futuresoftm2/airbnb-clone-swiftUI/airbnbClone/airbnbClone/Core/Explore/ExploreView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "440">
-               </Location>
-               <Location
-                  uuid = "0285A5E2-B017-4953-8B27-73616A9FFEB5 - a050c60809e1b44d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; airbnbClone.listingView in closure #2 (airbnbClone.ListingModel) -&gt; SwiftUI.NavigationLink&lt;airbnbClone.listingView, Swift.Never&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0, SwiftUI.ForEach&lt;Swift.Array&lt;airbnbClone.ListingModel&gt;, Swift.Optional&lt;Swift.String&gt;, SwiftUI.NavigationLink&lt;airbnbClone.listingView, Swift.Never&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.LazyVStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0, SwiftUI.ForEach&lt;Swift.Array&lt;airbnbClone.ListingModel&gt;, Swift.Optional&lt;Swift.String&gt;, SwiftUI.NavigationLink&lt;airbnbClone.listingView, Swift.Never&gt;&gt;)&gt;&gt; in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;airbnbClone.destinationSearchView, &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Hashable, &#x3c4;_1_1: SwiftUI.View&gt;(for: &#x3c4;_1_0.Type, destination: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0&gt; in airbnbClone.ExploreView.body.getter : some"
-                  moduleName = "airbnbClone"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/futuresoftm2/airbnb-clone-swiftUI/airbnbClone/airbnbClone/Core/Explore/ExploreView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "80">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "C9982D9F-2BF2-4CB3-A676-3D550A498BAA"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -569,8 +489,8 @@
             filePath = "airbnbClone/Core/Explore/ExploreView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>

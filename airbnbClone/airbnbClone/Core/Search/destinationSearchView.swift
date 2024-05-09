@@ -2,7 +2,7 @@
 //  destinationSearchView.swift
 //  airbnbClone
 //
-//  Created by FuturesoftM2 on 27/04/24.
+//  Created by Ashutosh Chauhan on 27/04/24.
 //
 
 import SwiftUI
@@ -26,6 +26,7 @@ struct destinationSearchView: View {
             {
               
                 Button(action: {
+                    destination = ""
                     viewModel.fetchListing()
                     show.toggle()
                 }, label: {
